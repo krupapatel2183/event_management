@@ -28,9 +28,5 @@ This is a Laravel 12 application.
     ```bash
     php artisan migrate
 
-    or
-
-    use the test_contact.sql file -> import -> use in .env
-
 4. **Ready to Use**
 

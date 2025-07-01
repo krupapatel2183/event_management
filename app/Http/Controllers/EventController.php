@@ -135,15 +135,4 @@ class EventController extends Controller
         $event->delete();
         return redirect()->route('admin.events')->with('success', 'Event deleted successfully.');
     }
-
-    public function categorized()
-    {
-        $today = Carbon::today()->toDateString();
-
-        return response()->json([
-            'today' => Event::whereDate('date', $today)->get(),
-            'future' => Event::whereDate('date', '>', $today)->get(),
-            'past' => Event::whereDate('date', '<', $today)->get(),
-        ]);
-    }
 }
